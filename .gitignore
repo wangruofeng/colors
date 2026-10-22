@@ -1,0 +1,12 @@
+.DS_Store
+images/.DS_Store
+downloads/*.zip
+artifacts/
+node_modules/
+*.log
+.venv-tooling/
+
+dist/
+.env
+.env.*
+.logs/
