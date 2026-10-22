@@ -109,7 +109,7 @@ const TITLE_TONE_MAP = [
   { match: ['audit', '清单', '索引', '覆盖'], hues: ['blue', 'green', 'neutral'] },
   { match: ['skills', 'skill', 'xxd', '工作流'], hues: ['purple', 'blue', 'cyan'] },
   { match: ['download', '下载', 'zip', '素材'], hues: ['orange', 'red', 'yellow'] },
-  { match: ['author', '作者', '小小东', '支持'], hues: ['red', 'purple', 'orange'] },
+  { match: ['author', '作者', 'wangruofeng', '支持'], hues: ['red', 'purple', 'orange'] },
   { match: ['open', '开放', 'github', '贡献'], hues: ['green', 'cyan', 'blue'] },
 ];
 
@@ -245,7 +245,7 @@ const STYLE_LAB_SCENES = [
     overline: 'COVER',
     title: '春山如黛',
     subtitle: '先定气质，再定节奏。',
-    meta: '小小东整理 / 传统色',
+    meta: 'wangruofeng整理 / 传统色',
     action: '系列封面',
   },
   {

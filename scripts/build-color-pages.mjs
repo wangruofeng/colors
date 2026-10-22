@@ -73,9 +73,9 @@ const hueFamilySlug = (family) => HUE_FAMILY_META[family]?.slug || null;
 const REPO_URL = 'https://github.com/nevertoday/zhongguo-traditional-colors';
 const AUTHOR_NODE = {
   '@type': 'Person',
-  name: '小小东',
+  name: 'wangruofeng',
   url: `${SITE}/`,
-  sameAs: ['https://x.com/xiaoxiaodong01', REPO_URL],
+  sameAs: ['https://github.com/wangruofeng'],
 };
 const TERM_SET_NODE = {
   '@type': 'DefinedTermSet',
@@ -352,7 +352,7 @@ function renderColorPage(image, harmony, context, siblings = {}) {
     },
     {
       q: `「${name}」的色卡可以免费下载吗？`,
-      a: `可以。本页提供「${name}」的 PNG 高清色卡与 SVG 分享卡免费下载，项目由小小东整理维护、GPL-3.0 开源。`,
+      a: `可以。本页提供「${name}」的 PNG 高清色卡与 SVG 分享卡免费下载，项目由wangruofeng整理维护、GPL-3.0 开源。`,
     },
   ].filter(Boolean);
 
@@ -711,8 +711,8 @@ function renderShareCard(image, harmony, partners = []) {
 function renderColorIndex(images, harmonies) {
   const canonical = `${SITE}/colors/`;
   const ogImage = `${SITE}/docs/screenshots/home-gallery.png`;
-  const description = `中国传统色大全：${images.length} 种中华传统色色卡一览，按红橙黄绿青蓝紫与中性色系分组，每色含 HEX/RGB 色值并链接到独立色彩详情页。由小小东整理维护，GPL-3.0 开源。`;
-  const intro = `这里收录 ${images.length} 种中国传统色（中华传统色），按色系分组排列，是一份可检索的传统色色卡大全。每个颜色都有独立页面，列出 HEX、RGB、HSL、CMYK 色值与同类、邻近、互补等配色关系。色值来自项目维护的 742 色清单，由小小东整理、GPL-3.0 开源。`;
+  const description = `中国传统色大全：${images.length} 种中华传统色色卡一览，按红橙黄绿青蓝紫与中性色系分组，每色含 HEX/RGB 色值并链接到独立色彩详情页。由wangruofeng整理维护，GPL-3.0 开源。`;
+  const intro = `这里收录 ${images.length} 种中国传统色（中华传统色），按色系分组排列，是一份可检索的传统色色卡大全。每个颜色都有独立页面，列出 HEX、RGB、HSL、CMYK 色值与同类、邻近、互补等配色关系。色值来自项目维护的 742 色清单，由wangruofeng整理、GPL-3.0 开源。`;
 
   // Bucket colors by hue family, preserving the manifest's id order within each.
   const groups = new Map(HUE_FAMILY_ORDER.map((family) => [family, []]));
@@ -1018,7 +1018,7 @@ function renderHueHub(family, list, totalCount) {
 function renderLlmsTxt(images, harmonies) {
   const lead = `# 中国传统色（中华传统色）\n\n`
     + `> ${images.length} 种中国传统色色卡，每色含 HEX/RGB/HSL/CMYK 色值与同类、邻近、互补等配色关系。`
-    + `由小小东整理维护，GPL-3.0 开源，源代码见 ${REPO_URL}。\n`;
+    + `由wangruofeng整理维护，GPL-3.0 开源，源代码见 ${REPO_URL}。\n`;
   const keyPages = [
     `- [首页](${SITE}/)：项目主页与色卡画廊`,
     `- [中国传统色大全](${SITE}/colors/)：全部 ${images.length} 色，按色系分组的可检索索引`,

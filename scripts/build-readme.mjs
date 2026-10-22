@@ -641,16 +641,16 @@ npm run readme
 
 ## 支持作者
 
-这个传统色图片合集会继续保持免费开源。如果它帮你省了整理素材的时间，欢迎 Star、分享给需要的人，或者用微信、支付宝支持小小东继续维护。反馈和 issue 同样有帮助。
+这个传统色图片合集会继续保持免费开源。如果它帮你省了整理素材的时间，欢迎 Star、分享给需要的人，或者用微信、支付宝支持上游作者小小东继续维护。反馈和 issue 同样有帮助。
 
 <table>
   <tr>
     <td align="center" width="220">
-      <img src="docs/images/wechat-reward-qr.png" alt="微信打赏小小东的二维码" width="180"><br>
+      <img src="docs/images/wechat-reward-qr.png" alt="微信打赏上游作者小小东的二维码" width="180"><br>
       <strong>微信</strong>
     </td>
     <td align="center" width="220">
-      <img src="docs/images/alipay-reward-qr.png" alt="支付宝打赏小小东的二维码" width="180"><br>
+      <img src="docs/images/alipay-reward-qr.png" alt="支付宝打赏上游作者小小东的二维码" width="180"><br>
       <strong>支付宝</strong>
     </td>
   </tr>
@@ -658,7 +658,7 @@ npm run readme
 
 ## 联系作者
 
-可以通过作者 X 主页联系：[@xiaoxiaodong01](${authorUrl})。
+可以通过上游作者 X 主页联系：[@xiaoxiaodong01](${authorUrl})。
 
 ## 贡献
 
@@ -807,12 +807,12 @@ The complete ZIP is provided through GitHub Releases. Browser-side ZIP generatio
 
 ## Support
 
-This archive remains free and open source. If it saves you time, a Star, a share, a useful issue, or buying 小小东 a coffee through Buy Me a Coffee all help the project keep improving.
+This archive remains free and open source. If it saves you time, a Star, a share, a useful issue, or buying 上游作者小小东 a coffee through Buy Me a Coffee all help the project keep improving.
 
 <table>
   <tr>
     <td align="center" width="220">
-      <img src="docs/images/buy-me-a-coffee-qr.png" alt="Support 小小东 through Buy Me a Coffee QR code" width="180"><br>
+      <img src="docs/images/buy-me-a-coffee-qr.png" alt="Support 上游作者小小东 through Buy Me a Coffee QR code" width="180"><br>
       <strong>Buy Me a Coffee</strong>
     </td>
   </tr>

@@ -182,7 +182,7 @@ if (existsSync(path.join(ROOT, 'llms-full.txt'))) {
 // 3c. index.html carries the consolidated entity graph (Organization + Person sameAs).
 {
   const home = read('index.html');
-  for (const token of ['"@type":"Organization"', '"@type":"Person"', '"@id":"https://colors.wangruofeng007.com/#person"', 'x.com/xiaoxiaodong01']) {
+  for (const token of ['"@type":"Organization"', '"@type":"Person"', '"@id":"https://colors.wangruofeng007.com/#person"', 'github.com/wangruofeng']) {
     if (!home.includes(token)) fail(`index.html: missing entity-graph token ${token}`);
   }
 }

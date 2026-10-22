@@ -44,7 +44,7 @@
 | **P1** | 色卡页加真实 `<img>` + 图片 sitemap（打开 Google 图片流量） | 色卡页当前 0 个 `<img>`（用 CSS 色块），`thumbnails/color-card-NNN.jpg` 已存在。在 hero 加 LCP `<img ... alt="中国传统色 名 HEX 色卡" fetchpriority="high">`；`renderSitemap` 的 `<urlset>` 加 `xmlns:image`，每色加 `<image:image>`。色卡站最自然的流量来源目前被完全放弃。 | 中（代码） |
 | **P1** | Bing Webmaster + IndexNow 作为快速第二通道 | Bing 对新站收录比 Google 快，且是唯一吃 IndexNow 的引擎（还喂 ChatGPT/Copilot/DuckDuckGo）。生成 IndexNow key 提交到站点根，加 `scripts/ping-indexnow.mjs` + `npm run indexnow` 读 sitemap POST 到 api.indexnow.org，接进 `prepare:release`。 | 中（外部+代码） |
 | **P2** | `dictionary.html` 补正文 + 加 CollectionPage/ItemList JSON-LD | 它是每个色卡页面包屑的 position 2、也是 SearchAction 目标，却 0 JSON-LD、仅 sr-only H1。加可见 H1「中国传统色 742 色色彩字典」+ 头部关键词正文 + CollectionPage(含 ItemList) 结构化数据。 | 中（代码） |
-| **P2** | 加 Organization/Person 实体 + sameAs，并丰富色卡页 JSON-LD | WebSite 节点无 publisher，无法把 1,035-star 仓库 / X / 站点合并成一个品牌实体（新域名关键 E-E-A-T）。加 Organization+Person(小小东) `sameAs`，色卡页 JSON-LD 补 ImageObject、identifier、HEX/RGB/HSL/CMYK 的 PropertyValue。 | 中（代码） |
+| **P2** | 加 Organization/Person 实体 + sameAs，并丰富色卡页 JSON-LD | WebSite 节点无 publisher，无法把 1,035-star 仓库 / X / 站点合并成一个品牌实体（新域名关键 E-E-A-T）。加 Organization+Person(wangruofeng) `sameAs`，色卡页 JSON-LD 补 ImageObject、identifier、HEX/RGB/HSL/CMYK 的 PropertyValue。 | 中（代码） |
 | **P2** | hub 页面瞄准 国风/古风 信息型查询 | `palettes.html`/`uses.html` 标题描述加「国风配色方案 / 古风色彩搭配 / 传统色RGB对照表」等中尾词角度。 | 中（内容） |
 
 ### 🌱 第 2-3 月 — 权重与规模
