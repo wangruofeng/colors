@@ -271,9 +271,20 @@
     if (!header || !nav || !toggle) return;
 
     const compactNav = () => window.matchMedia('(max-width: 1180px)').matches;
+    let lockedScroll = null;
     const setOpen = (open) => {
       const nextOpen = compactNav() && open;
+      if (nextOpen && !lockedScroll) {
+        lockedScroll = { x: window.scrollX, y: window.scrollY };
+        document.documentElement.style.setProperty('--nav-scroll-offset', `${-lockedScroll.y}px`);
+      }
       header.dataset.navOpen = nextOpen ? 'true' : 'false';
+      document.documentElement.toggleAttribute('data-nav-scroll-locked', nextOpen);
+      if (!nextOpen && lockedScroll) {
+        window.scrollTo({ left: lockedScroll.x, top: lockedScroll.y, behavior: 'instant' });
+        document.documentElement.style.removeProperty('--nav-scroll-offset');
+        lockedScroll = null;
+      }
       toggle.setAttribute('aria-expanded', String(nextOpen));
       toggle.setAttribute('aria-label', nextOpen ? '收起导航' : '展开导航');
       const icon = toggle.querySelector('iconify-icon');

@@ -514,7 +514,7 @@ function renderColorPage(image, harmony, context, siblings = {}) {
         <h2 id="about-title">关于「${escapeHtml(name)}」</h2>
         <p class="color-section-lede">${escapeHtml(aboutSentences)}</p>${familyHubLink}
         <figure class="color-card-figure" style="margin:1.25rem 0 0; max-width:270px;">
-          <img src="../thumbnails/color-card-${escapeHtml(image.id)}.jpg" width="270" height="360" fetchpriority="high" decoding="async" alt="${escapeHtml(`中国传统色 ${name} ${hex} 色卡`)}" style="display:block; width:100%; height:auto;">
+          <img src="../${escapeHtml(encodeURI(image.path))}" width="270" height="360" fetchpriority="high" decoding="async" alt="${escapeHtml(`中国传统色 ${name} ${hex} 色卡`)}" style="display:block; width:100%; height:auto;">
           <figcaption class="color-section-lede" style="margin-top:0.5rem;">「${escapeHtml(name)}」色卡 · ${escapeHtml(hex)}</figcaption>
         </figure>
       </section>`;

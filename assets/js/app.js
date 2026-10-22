@@ -2473,7 +2473,7 @@ function cardMarkup(image) {
           <img src="${thumbnailUrl}" srcset="${thumbnailUrl} 270w, ${encodedPath(`thumbnails/color-card-${image.id}-810.webp`)} 810w" sizes="auto, (max-width: 720px) 100vw, 270px" alt="中国传统色色卡 ${title}" width="270" height="360" loading="lazy" decoding="async">
         </button>
         ${hex ? `<div class="copy-color-control">
-          <button class="copy-color-button" type="button" data-copy-color="${image.id}" aria-label="复制 ${colorName(image)} ${colorValueLabel()} 色值 ${copyValue}">复制 <span data-copy-value>${copyValue}</span></button>
+          <button class="copy-color-button" type="button" data-copy-color="${image.id}" title="复制色值" aria-label="复制 ${colorName(image)} ${colorValueLabel()} 色值 ${copyValue}"><iconify-icon icon="lucide:copy" aria-hidden="true"></iconify-icon><span data-copy-value>${copyValue}</span></button>
           <label class="copy-format">
             <span class="sr-only">选择复制色值类型</span>
             <select data-copy-format aria-label="复制色值类型">
@@ -2617,7 +2617,7 @@ async function copyHex(button) {
   button.dataset.copied = 'true';
   window.setTimeout(() => {
     const value = colorValue(image);
-    button.innerHTML = `复制 <span data-copy-value>${value}</span>`;
+    button.innerHTML = `<iconify-icon icon="lucide:copy" aria-hidden="true"></iconify-icon><span data-copy-value>${value}</span>`;
     delete button.dataset.copied;
   }, 1200);
 }
@@ -2639,7 +2639,7 @@ function updateCopyControls() {
     if (valueNode) valueNode.textContent = value;
     button.setAttribute('aria-label', `复制 ${colorName(image)} ${colorValueLabel()} 色值 ${value}`);
     if (!button.dataset.copied) {
-      button.innerHTML = `复制 <span data-copy-value>${value}</span>`;
+      button.innerHTML = `<iconify-icon icon="lucide:copy" aria-hidden="true"></iconify-icon><span data-copy-value>${value}</span>`;
     }
   });
 

@@ -807,6 +807,8 @@ function renderJa(project, images) {
 
 ${languageSwitch("ja")}
 
+本プロジェクトは [nevertoday/zhongguo-traditional-colors](https://github.com/nevertoday/zhongguo-traditional-colors) のオリジナルソースコードをもとに、修正・拡張を行っています。原作者の貢献に感謝します。
+
 このリポジトリは、デザイン、教材、記事、Web テーマ、文化研究でそのまま使える中国伝統色の資料兼ワークベンチです。
 
 ${project.count} 枚の高解像度カラーカードを収録し、元の 742 色リストと対応させています。各カードには色名、HEX、RGB、CMYK、配色の参考、雰囲気のキーワードをまとめています。現在のサイトでは、色カード閲覧だけでなく、実際のレイアウトでの試色、配色生成、配色関係の閲覧、グラデーションロジックの確認、用途カード作成、shadcn テーマ生成、ターミナル配色の設定、気に入った色や配色のローカル保存もできます。
@@ -945,6 +947,8 @@ function renderZhReaderFirst(project, images) {
 
 ${languageSwitch("zh")}
 
+原始源码来自 [nevertoday/zhongguo-traditional-colors](https://github.com/nevertoday/zhongguo-traditional-colors)。本项目基于该开源项目进行修改与扩展，感谢原作者的贡献。
+
 > 不是又一份“好看但不知道怎么用”的中国色色值表。
 >
 > 这是一张从 **找色、配色、试色到交付** 的中国传统色工作台：742 张高清色卡、8,904 组配色关系，还能把一个颜色直接放进网页、PPT、封面、UI 主题和终端里试。
@@ -1077,6 +1081,8 @@ function renderEnReaderFirst(project, images) {
   return `# Chinese Traditional Colors
 
 ${languageSwitch("en")}
+
+This project is based on the original source code from [nevertoday/zhongguo-traditional-colors](https://github.com/nevertoday/zhongguo-traditional-colors), with modifications and extensions. Thanks to the original author for their work.
 
 > Not another color-value list that looks beautiful but leaves you wondering what to do next.
 >

@@ -19,8 +19,10 @@
   --header-bg: rgba(255, 255, 255, 0.86);
   --hero-fade-start: rgba(255, 255, 255, 0.86);
   --hero-fade-end: rgba(247, 247, 244, 0.96);
-  --hover-bg: #111111;
-  --hover-text: #f7f7f4;
+  --hover-bg: #EEF4F0;
+  --selected-bg: #DCE8DF;
+  --selected-border: #9DB5A6;
+  --hover-text: #36594B;
   --feature-bg: #f0f0ec;
   --feature-text: #111111;
   --footer-text: #575752;
@@ -62,8 +64,10 @@
   --header-bg: rgba(17, 16, 14, 0.86);
   --hero-fade-start: rgba(17, 16, 14, 0.9);
   --hero-fade-end: rgba(17, 16, 14, 0.96);
-  --hover-bg: #050505;
-  --hover-text: #f2f0ea;
+  --hover-bg: #253C32;
+  --selected-bg: #334E40;
+  --selected-border: #789887;
+  --hover-text: #E2ECE7;
   --feature-bg: #0b0a09;
   --feature-text: #f2f0ea;
   --footer-text: #d3cfc6;
@@ -252,6 +256,25 @@ code {
   border: 0;
 }
 
+html[data-nav-scroll-locked] {
+  overflow: hidden;
+  overflow-anchor: none;
+}
+
+html[data-nav-scroll-locked] body {
+  position: fixed;
+  top: var(--nav-scroll-offset);
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+html[data-nav-scroll-locked] .site-header {
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
 .site-header {
   --hover-bg: #EEF4F0;
   --hover-text: #36594B;
@@ -406,7 +429,8 @@ code {
 .site-nav button:hover,
 .site-nav button:focus-visible {
   color: var(--ink);
-  background: color-mix(in srgb, var(--ink) 5%, transparent);
+  background: var(--hover-bg);
+  color: var(--hover-text);
   outline: none;
 }
 
@@ -446,14 +470,14 @@ code {
   display: none;
 }
 
-/* Desktop navigation has its own row so links never wrap beside the brand. */
+/* Keep desktop navigation in one row, with links scrolling within the middle column. */
 @media (min-width: 1181px) {
   .site-header {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     column-gap: 24px;
     row-gap: 8px;
     padding-top: 12px;
-    padding-bottom: 0;
+    padding-bottom: 12px;
   }
 
   .brand-mark {
@@ -462,7 +486,7 @@ code {
   }
 
   .header-tools {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
   }
 
@@ -485,13 +509,12 @@ code {
   }
 
   .site-nav {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 1;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: clamp(0px, 0.4vw, 8px);
     overflow-x: auto;
-    border-top: 1px solid var(--line);
     scrollbar-width: thin;
   }
 
@@ -1319,9 +1342,8 @@ body[data-no-gradient-logic] .studio-direction:focus-visible {
 }
 
 .card-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
   padding: 13px 12px 14px;
   border-top: 1px solid var(--line);
@@ -1337,12 +1359,10 @@ body[data-no-gradient-logic] .studio-direction:focus-visible {
 }
 
 .card-meta strong {
-  overflow: hidden;
   font-size: 0.88rem;
   font-weight: 600;
   line-height: 1.45;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .card-meta small {
@@ -1354,14 +1374,18 @@ body[data-no-gradient-logic] .studio-direction:focus-visible {
 .card-actions {
   display: inline-flex;
   flex: 0 0 auto;
+  justify-content: center;
   gap: 6px;
 }
 
 .card-button {
-  display: grid;
+  display: flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
   width: 34px;
   height: 34px;
-  place-items: center;
+  padding: 0;
   color: var(--ink);
   background: color-mix(in srgb, var(--panel) 78%, transparent);
   border: 1px solid var(--line);
@@ -5485,10 +5509,12 @@ body[data-no-gradient-logic] .skills-list::before {
   top: 10px;
   right: 10px;
   z-index: 2;
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 38px;
   height: 38px;
-  place-items: center;
+  padding: 0;
   color: var(--ink);
   background: color-mix(in srgb, var(--panel) 84%, transparent);
   border: 1px solid var(--line);
@@ -6018,9 +6044,9 @@ body[data-no-gradient-logic] .skills-list::before {
 .preview-guide-color:focus-visible,
 .preview-guide-anchor[data-copied="true"],
 .preview-guide-color[data-copied="true"] {
-  color: #f7f7f4;
-  background: #111111;
-  border-color: #f7f7f4;
+  color: var(--hover-text);
+  background: var(--hover-bg);
+  border-color: var(--selected-border);
   outline: none;
   transform: translateY(-1px);
 }
@@ -6031,9 +6057,9 @@ body[data-no-gradient-logic] .skills-list::before {
 :root[data-theme="dark"] .preview-guide-color:focus-visible,
 :root[data-theme="dark"] .preview-guide-anchor[data-copied="true"],
 :root[data-theme="dark"] .preview-guide-color[data-copied="true"] {
-  color: #11100e;
-  background: #f2f0ea;
-  border-color: #f2f0ea;
+  color: var(--hover-text);
+  background: var(--hover-bg);
+  border-color: var(--selected-border);
 }
 
 .preview-guide-anchor-swatch,
@@ -6147,19 +6173,23 @@ body[data-no-gradient-logic] .skills-list::before {
 
 .hero-preview-content {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-content: start;
-  gap: 22px;
+  gap: 14px;
   height: 100%;
+  min-width: 0;
   min-height: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: clamp(30px, 5vw, 54px);
+  padding: 24px;
   scrollbar-width: thin;
 }
 
 .hero-preview-content h2 {
   margin-bottom: 0;
-  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  overflow-wrap: anywhere;
   line-height: 1.06;
 }
 
@@ -6174,7 +6204,7 @@ body[data-no-gradient-logic] .skills-list::before {
   display: grid;
   grid-template-columns: 74px minmax(0, 1fr);
   gap: 18px;
-  padding: 13px 0;
+  padding: 8px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -6200,7 +6230,7 @@ body[data-no-gradient-logic] .skills-list::before {
 
 .hero-preview-actions {
   display: grid;
-  grid-template-columns: minmax(102px, 0.52fr) minmax(154px, 1fr) repeat(2, minmax(140px, 0.9fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   align-items: stretch;
   padding: 10px;
@@ -6340,11 +6370,10 @@ body[data-no-gradient-logic] .skills-list::before {
 
 .harmony-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   min-width: 0;
-  overflow-x: auto;
   padding-bottom: 2px;
-  scrollbar-width: thin;
 }
 
 .harmony-tab {
@@ -6910,6 +6939,7 @@ body[data-no-gradient-logic] .skills-list::before {
     max-height: 0;
     padding: 0;
     overflow: hidden;
+    overscroll-behavior-y: contain;
     background: color-mix(in srgb, var(--line) 78%, transparent);
     border: 0 solid transparent;
     opacity: 0;
@@ -7207,7 +7237,7 @@ body[data-no-gradient-logic] .skills-list::before {
   .site-header {
     position: sticky;
     align-items: center;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 12px;
     min-height: 62px;
     padding: 12px 20px;
@@ -7229,14 +7259,22 @@ body[data-no-gradient-logic] .skills-list::before {
     grid-column: 2;
     grid-row: 1;
     padding-inline: 10px;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .header-tools .nav-icon-link,
+  .header-tools .theme-toggle {
+    display: none;
   }
 
   .site-nav {
-    grid-template-columns: 1fr;
+    grid-row: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-header[data-nav-open="true"] .site-nav {
-    max-height: 450px;
+    max-height: min(450px, calc(100dvh - 100px));
     border-bottom-width: 1px;
     border-bottom-color: var(--line);
   }
@@ -9340,17 +9378,52 @@ body[data-style-dock-collapsed="true"] .style-lab-control.style-lab-dock > *:not
   }
 }
 
-/* Keep the navigation trigger clear of the optional page chip on small phones. */
-@media (max-width: 380px) {
-  .site-header {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
 
-  .nav-current-chip {
-    display: none;
-  }
+/* Reserve a separate inset area for format-selector arrows. */
+.copy-format,
+.hero-preview-format,
+.style-format-select {
+  position: relative;
+}
 
-  .header-tools {
-    grid-column: 2;
-  }
+.copy-format::after,
+.hero-preview-format::after,
+.style-format-select::after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  pointer-events: none;
+  transform: translateY(-68%) rotate(45deg);
+}
+
+.copy-format {
+  color: var(--hover-text);
+}
+
+.copy-format select,
+.hero-preview-format select,
+.style-format-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 34px;
+}
+
+/* Keep persistent selection distinct from the lighter hover wash. */
+.card-button[aria-pressed="true"],
+.style-mode-button[aria-pressed="true"],
+.style-intent-button[aria-pressed="true"],
+.style-scheme-favorite[aria-pressed="true"],
+.style-template-meta button[aria-pressed="true"],
+.dictionary-huebar button[aria-pressed="true"],
+.style-color-hues button[aria-pressed="true"],
+.harmony-tab[aria-selected="true"],
+.header-favorites[aria-current="page"] {
+  color: var(--hover-text);
+  background: var(--selected-bg);
+  border-color: var(--selected-border);
 }

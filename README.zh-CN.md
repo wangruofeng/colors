@@ -2,6 +2,8 @@
 
 简体中文 | [English](README.md) | [日本語](README.ja.md)
 
+原始源码来自 [nevertoday/zhongguo-traditional-colors](https://github.com/nevertoday/zhongguo-traditional-colors)。本项目基于该开源项目进行修改与扩展，感谢原作者的贡献。
+
 > 不是又一份“好看但不知道怎么用”的中国色色值表。
 >
 > 这是一张从 **找色、配色、试色到交付** 的中国传统色工作台：742 张高清色卡、8,904 组配色关系，还能把一个颜色直接放进网页、PPT、封面、UI 主题和终端里试。

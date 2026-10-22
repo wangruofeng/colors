@@ -2,6 +2,8 @@
 
 [简体中文](README.zh-CN.md) | English | [日本語](README.ja.md)
 
+This project is based on the original source code from [nevertoday/zhongguo-traditional-colors](https://github.com/nevertoday/zhongguo-traditional-colors), with modifications and extensions. Thanks to the original author for their work.
+
 > Not another color-value list that looks beautiful but leaves you wondering what to do next.
 >
 > This is a practical workspace for moving from **finding a Chinese color to pairing, testing, and shipping it**: 742 high-resolution cards, 8,904 harmony sets, real-scene previews, shadcn themes, and terminal palettes.
