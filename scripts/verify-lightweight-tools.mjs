@@ -39,7 +39,7 @@ for (const token of [
   if (!skillsJs.includes(token)) fail(`assets/js/skills.js: missing ${token}`);
 }
 
-if (!dailyHtml.includes('shared-chrome.js?v=20260628-1')) {
+if (!dailyHtml.includes('shared-chrome.js?v=20261022-2')) {
   fail('daily-color-playground.html: shared chrome version should match the rest of the site');
 }
 for (const token of [

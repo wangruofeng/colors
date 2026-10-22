@@ -72,8 +72,8 @@ Theme Forge 会把一个锚点色拆成完整的 shadcn 语义色角色，同时
 仓库中的 `xxd-*` Skills 都自带完整的 742 色清单和配色关系，复制一个目录就能独立使用，无需联网取数据。
 
 ```bash
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 ```
 
 | 你卡在哪一步 | 用这个 Skill |
@@ -126,10 +126,10 @@ README 只展示 12 张代表色卡。完整 742 张可以在 [在线色卡库](
 ```bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 ```
 
-然后打开 `http://localhost:5173`。新增或替换色卡后，再运行 `npm run manifest && npm run readme` 即可同步图片清单与 README 图廊。
+然后打开 `http://localhost:5178`。新增或替换色卡后，再运行 `npm run manifest && npm run readme` 即可同步图片清单与 README 图廊。
 
 ## 使用边界
 

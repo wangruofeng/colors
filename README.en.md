@@ -63,8 +63,8 @@ Theme Forge turns one named anchor into a full set of shadcn semantic roles, han
 Each `xxd-*` skill bundles the full color list and harmony data, so it can work independently without fetching reference data from the network.
 
 ```bash
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 ```
 
 | Where the work is stuck | Skill to use |
@@ -117,10 +117,10 @@ This is a static site. To preview it locally:
 ```bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 ```
 
-Then open `http://localhost:5173`. After adding or replacing cards, run `npm run manifest && npm run readme` to update the manifest and README gallery.
+Then open `http://localhost:5178`. After adding or replacing cards, run `npm run manifest && npm run readme` to update the manifest and README gallery.
 
 ## A practical boundary
 

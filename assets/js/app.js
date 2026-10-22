@@ -2382,7 +2382,7 @@ function buildHero() {
 
   const imageMarkup = (image, rowIndex, duplicate = false) => (
     `<button class="hero-film-card" type="button" data-hero-preview="${image.id}"${duplicate ? ' tabindex="-1" aria-hidden="true"' : ` aria-label="查看 ${colorTitle(image)} 色卡信息"`}>
-      <img src="${encodedPath(thumbnailPath(image))}" alt="${duplicate ? '' : `中国传统色色卡 ${colorTitle(image)}`}" width="270" height="360" loading="${!duplicate && rowIndex < 2 ? 'eager' : 'lazy'}"${duplicate ? ' fetchpriority="low"' : rowIndex === 0 ? ' fetchpriority="high"' : ''} decoding="async">
+      <img src="${encodedPath(thumbnailPath(image))}" srcset="${encodedPath(thumbnailPath(image))} 270w, ${encodedPath(`thumbnails/color-card-${image.id}-810.webp`)} 810w" sizes="(max-width: 720px) 25vw, 12vw" alt="${duplicate ? '' : `中国传统色色卡 ${colorTitle(image)}`}" width="270" height="360" loading="${!duplicate && rowIndex < 2 ? 'eager' : 'lazy'}"${duplicate ? ' fetchpriority="low"' : rowIndex === 0 ? ' fetchpriority="high"' : ''} decoding="async">
     </button>`
   );
 
@@ -2470,7 +2470,7 @@ function cardMarkup(image) {
     <article class="color-card">
       <div class="card-media">
         <button class="card-image-link" type="button" data-open-color-preview="${image.id}" aria-label="查看 ${title} 色卡详情">
-          <img src="${thumbnailUrl}" alt="中国传统色色卡 ${title}" width="270" height="360" loading="lazy" decoding="async">
+          <img src="${thumbnailUrl}" srcset="${thumbnailUrl} 270w, ${encodedPath(`thumbnails/color-card-${image.id}-810.webp`)} 810w" sizes="auto, (max-width: 720px) 100vw, 270px" alt="中国传统色色卡 ${title}" width="270" height="360" loading="lazy" decoding="async">
         </button>
         ${hex ? `<div class="copy-color-control">
           <button class="copy-color-button" type="button" data-copy-color="${image.id}" aria-label="复制 ${colorName(image)} ${colorValueLabel()} 色值 ${copyValue}">复制 <span data-copy-value>${copyValue}</span></button>

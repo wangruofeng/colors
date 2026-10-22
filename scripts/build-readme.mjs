@@ -309,10 +309,10 @@ ${featureGuide("zh")}
 
 \`\`\`bash
 # 克隆仓库后，把需要的 skill 复制到个人 skills 目录
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 # 想全部装上：
-cp -r zhongguo-traditional-colors/skills/xxd-* ~/.claude/skills/
+cp -r colors/skills/xxd-* ~/.claude/skills/
 \`\`\`
 
 每个 skill 自带完整 \`references/\`，复制后即可独立运行，无需联网取数据。装好后在 Claude Code 里直接描述任务（例如“用朱砂做一套 UI token”），或显式调用对应 skill 即可触发。
@@ -617,13 +617,13 @@ downloads/    本地生成的下载压缩包，不建议提交到 Git
 \`\`\`bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 \`\`\`
 
 然后访问：
 
 \`\`\`text
-http://localhost:5173
+http://localhost:5178
 \`\`\`
 
 也可以直接部署到 GitHub Pages。完整 ZIP 通过 Release 附件分发；浏览器备用打包需要通过本地服务器或线上静态站访问，不建议直接用 \`file://\` 打开。
@@ -725,10 +725,10 @@ Each \`xxd-*\` is a native Claude Code skill (a \`SKILL.md\` with frontmatter), 
 
 \`\`\`bash
 # After cloning, copy the skills you want into your personal skills folder
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 # Or install all of them:
-cp -r zhongguo-traditional-colors/skills/xxd-* ~/.claude/skills/
+cp -r colors/skills/xxd-* ~/.claude/skills/
 \`\`\`
 
 Every skill bundles its own \`references/\`, so it runs standalone with no network access. Once installed, just describe your task in Claude Code (e.g. "build a UI token set from 朱砂") or invoke the matching skill to trigger it.
@@ -778,13 +778,13 @@ Images use the \`NNN-color-name.png\` naming pattern and match the [original 742
 \`\`\`bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 \`\`\`
 
 Then open:
 
 \`\`\`text
-http://localhost:5173
+http://localhost:5178
 \`\`\`
 
 The complete ZIP is provided through GitHub Releases. Browser-side ZIP generation is kept only as a fallback and should be used through a local server or GitHub Pages, not through \`file://\`.
@@ -867,10 +867,10 @@ ${featureGuide("ja")}
 
 \`\`\`bash
 # クローン後、使いたい skill を個人の skills フォルダにコピー
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 # すべて導入する場合:
-cp -r zhongguo-traditional-colors/skills/xxd-* ~/.claude/skills/
+cp -r colors/skills/xxd-* ~/.claude/skills/
 \`\`\`
 
 各 skill は \`references/\` を同梱しているため、ネットワークなしで単独動作します。導入後は Claude Code でタスクを説明する（例:「朱砂で UI token を作って」）か、対応する skill を呼び出すと起動します。
@@ -916,13 +916,13 @@ ${starHistoryBlock()}
 \`\`\`bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 \`\`\`
 
 その後、次の URL を開きます。
 
 \`\`\`text
-http://localhost:5173
+http://localhost:5178
 \`\`\`
 
 完全 ZIP は GitHub Releases から配布しています。ブラウザ側の ZIP 生成は予備手段として残しており、使用する場合は \`file://\` ではなくローカルサーバーまたは GitHub Pages から開いてください。
@@ -1015,8 +1015,8 @@ Theme Forge 会把一个锚点色拆成完整的 shadcn 语义色角色，同时
 仓库中的 \`xxd-*\` Skills 都自带完整的 742 色清单和配色关系，复制一个目录就能独立使用，无需联网取数据。
 
 \`\`\`bash
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 \`\`\`
 
 | 你卡在哪一步 | 用这个 Skill |
@@ -1050,10 +1050,10 @@ ${galleryRows(previewImages, "zh")}
 \`\`\`bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 \`\`\`
 
-然后打开 \`http://localhost:5173\`。新增或替换色卡后，再运行 \`npm run manifest && npm run readme\` 即可同步图片清单与 README 图廊。
+然后打开 \`http://localhost:5178\`。新增或替换色卡后，再运行 \`npm run manifest && npm run readme\` 即可同步图片清单与 README 图廊。
 
 ## 使用边界
 
@@ -1139,8 +1139,8 @@ Theme Forge turns one named anchor into a full set of shadcn semantic roles, han
 Each \`xxd-*\` skill bundles the full color list and harmony data, so it can work independently without fetching reference data from the network.
 
 \`\`\`bash
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 \`\`\`
 
 | Where the work is stuck | Skill to use |
@@ -1174,10 +1174,10 @@ This is a static site. To preview it locally:
 \`\`\`bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 \`\`\`
 
-Then open \`http://localhost:5173\`. After adding or replacing cards, run \`npm run manifest && npm run readme\` to update the manifest and README gallery.
+Then open \`http://localhost:5178\`. After adding or replacing cards, run \`npm run manifest && npm run readme\` to update the manifest and README gallery.
 
 ## A practical boundary
 

@@ -279,17 +279,12 @@ code {
   --brand-hover-ink: #f7f7f4;
 }
 
-.brand-mark span {
-  display: grid;
+.brand-icon {
+  display: block;
+  flex: 0 0 40px;
   width: 40px;
   height: 40px;
-  place-items: center;
-  color: var(--brand-logo-ink);
-  background: var(--brand-logo-bg);
-  border: 1px solid var(--brand-logo-border);
-  box-shadow: var(--brand-logo-shadow);
-  font-weight: 600;
-  transition: background 260ms var(--ease-out-quart), border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 220ms var(--ease-out-quart);
+  transition: transform 220ms var(--ease-out-quart);
 }
 
 .brand-mark strong {
@@ -317,10 +312,8 @@ code {
   transition: opacity 180ms ease, transform 300ms var(--ease-out-quart);
 }
 
-.brand-mark:hover span,
-.brand-mark:focus-visible span {
-  color: var(--brand-hover-ink);
-  background: linear-gradient(135deg, var(--brand-hover-a), var(--brand-hover-b) 54%, var(--brand-hover-c));
+.brand-mark:hover .brand-icon,
+.brand-mark:focus-visible .brand-icon {
   transform: translateY(-1px);
 }
 
@@ -439,6 +432,70 @@ code {
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
+}
+
+.header-favorites {
+  display: none;
+}
+
+/* Desktop navigation has its own row so links never wrap beside the brand. */
+@media (min-width: 1181px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 24px;
+    row-gap: 8px;
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+
+  .brand-mark {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header-tools {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .header-favorites {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 12px;
+    color: var(--ink-soft);
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+
+  .header-favorites:hover,
+  .header-favorites:focus-visible,
+  .header-favorites[aria-current="page"] {
+    color: var(--ink);
+    background: color-mix(in srgb, var(--ink) 5%, transparent);
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: clamp(0px, 0.4vw, 8px);
+    overflow-x: auto;
+    border-top: 1px solid var(--line);
+    scrollbar-width: thin;
+  }
+
+  .site-nav a {
+    min-height: 44px;
+    padding: 10px 8px;
+    font-size: 0.875rem;
+  }
+
+  .site-nav a[href$="favorites.html"] {
+    display: none;
+  }
 }
 
 .nav-icon-link,
@@ -4063,9 +4120,9 @@ body[data-no-gradient-logic] .skills-list::before {
 }
 
 .author-copy h2 {
-  margin-bottom: 8px;
-  font-size: clamp(3.2rem, 8vw, 6.6rem);
-  line-height: 0.95;
+  margin: 0 0 clamp(24px, 3vw, 40px);
+  font-size: clamp(2.4rem, 8vw, 6.6rem);
+  line-height: 1.2;
 }
 
 .author-role {

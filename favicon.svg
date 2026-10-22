@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="中国传统配色">
-  <rect width="64" height="64" fill="#111111"/>
-  <rect x="0" y="58" width="16" height="6" fill="#f9f4dc"/>
-  <rect x="16" y="58" width="16" height="6" fill="#fed71a"/>
-  <rect x="32" y="58" width="16" height="6" fill="#a7535a"/>
-  <rect x="48" y="58" width="16" height="6" fill="#1ba784"/>
-  <text x="32" y="43" fill="#f7f7f4" font-family="Noto Serif SC, Songti SC, STSong, serif" font-size="36" font-weight="900" text-anchor="middle">色</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">中国传统配色 · 叠色印章</title>
+  <desc id="desc">石青与米白色卡叠在朱红印面之后，印面内三道留白代表色卡与配色。</desc>
+  <path fill="#277A7B" d="M18 4h42v42H18z"/>
+  <path fill="#F2E6CE" d="M11 11h42v42H11z"/>
+  <path fill="#B64036" d="M4 18h42v42H4z"/>
+  <path fill="#FFF8EB" d="M12 26h26v6H12zm0 10h18v6H12zm0 10h26v6H12z"/>
+  <path fill="#D8AF58" d="M34 36h4v6h-4z"/>
 </svg>

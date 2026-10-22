@@ -112,7 +112,7 @@
     return `
     <header class="site-header">
       <a class="brand-mark" href="${base}index.html" aria-label="返回中国传统配色首页">
-        <span>色</span>
+        <img class="brand-icon" src="${base}favicon.svg?v=20261022-1" width="40" height="40" alt="" aria-hidden="true">
         <strong>中国传统配色</strong>
       </a>
       <a class="nav-current-chip" href="${navHref(pages.find((page) => page.key === currentPage) || pages[0])}" aria-label="当前页面：${currentPageLabel()}">
@@ -120,6 +120,10 @@
       </a>
       <nav class="site-nav" id="site-nav" aria-label="主导航">${navMarkup()}</nav>
       <div class="header-tools" aria-label="站点工具">
+        <a class="header-favorites" href="${base}favorites.html"${currentPage === 'favorites' ? ' aria-current="page"' : ''}>
+          <iconify-icon icon="lucide:bookmark" aria-hidden="true"></iconify-icon>
+          <span>收藏</span>
+        </a>
         <button class="nav-menu-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="展开导航">
           <iconify-icon icon="lucide:menu" aria-hidden="true"></iconify-icon>
           <span class="sr-only">展开导航</span>
@@ -140,7 +144,7 @@
     <footer class="site-footer">
       <div class="footer-main">
         <a class="footer-mark" href="${base}index.html" aria-label="返回中国传统配色首页">
-          <span>色</span>
+          <img class="brand-icon" src="${base}favicon.svg?v=20261022-1" width="40" height="40" alt="" aria-hidden="true">
           <strong>中国传统配色</strong>
         </a>
         <p>开放色彩资料。生产前请校色。</p>

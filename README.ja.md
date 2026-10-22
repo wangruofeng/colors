@@ -116,10 +116,10 @@
 
 ```bash
 # クローン後、使いたい skill を個人の skills フォルダにコピー
-git clone https://github.com/nevertoday/zhongguo-traditional-colors.git
-cp -r zhongguo-traditional-colors/skills/xxd-palette-builder ~/.claude/skills/
+git clone https://github.com/wangruofeng/colors.git
+cp -r colors/skills/xxd-palette-builder ~/.claude/skills/
 # すべて導入する場合:
-cp -r zhongguo-traditional-colors/skills/xxd-* ~/.claude/skills/
+cp -r colors/skills/xxd-* ~/.claude/skills/
 ```
 
 各 skill は `references/` を同梱しているため、ネットワークなしで単独動作します。導入後は Claude Code でタスクを説明する（例:「朱砂で UI token を作って」）か、対応する skill を呼び出すと起動します。
@@ -205,13 +205,13 @@ README ではページを読みやすく保つため、代表的な 24 枚だけ
 ```bash
 npm run manifest
 npm run readme
-npm run start
+npm run dev
 ```
 
 その後、次の URL を開きます。
 
 ```text
-http://localhost:5173
+http://localhost:5178
 ```
 
 完全 ZIP は GitHub Releases から配布しています。ブラウザ側の ZIP 生成は予備手段として残しており、使用する場合は `file://` ではなくローカルサーバーまたは GitHub Pages から開いてください。

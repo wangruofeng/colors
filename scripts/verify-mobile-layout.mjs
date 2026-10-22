@@ -26,7 +26,7 @@ if (!/width:\s*40px\s*;/.test(headerControls) || !/min-height:\s*40px\s*;/.test(
 }
 
 const brandMark = rule(styles, '.brand-mark');
-const brandIcon = rule(styles, '.brand-mark span');
+const brandIcon = rule(styles, '.brand-icon');
 if (!/min-height:\s*40px\s*;/.test(brandMark) || !/width:\s*40px\s*;/.test(brandIcon) || !/height:\s*40px\s*;/.test(brandIcon)) {
   fail('assets/css/styles.css: brand mark should be a stable 40px mobile tap target');
 }

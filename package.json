@@ -5,6 +5,7 @@
   "description": "Chinese traditional color cards, palette inspiration, and interactive design tools.",
   "type": "module",
   "scripts": {
+    "dev": "npm run start",
     "start": "python3 -m http.server 5178",
     "manifest": "node scripts/build-manifest.mjs",
     "verify:manifest": "node scripts/verify-manifest-join.mjs",
@@ -24,7 +25,8 @@
     "package:images": "node scripts/package-images.mjs",
     "prepare:release": "npm run manifest && npm run verify:manifest && npm run harmonies && npm run harmony:uses && npm run harmony:audit && npm run preview:syntax && npm run colorpages && npm run verify:colorpages && npm run verify:contrast && npm run verify:ux && npm run verify:seo && npm run terminal:audit && npm run readme && npm run package:images",
     "build": "node scripts/build-site.mjs",
-    "check": "npm run verify:manifest && npm run verify:colorpages && npm run verify:contrast && npm run verify:ux && npm run verify:seo && npm run harmony:audit && npm run terminal:audit"
+    "check": "npm run verify:manifest && npm run verify:colorpages && npm run verify:contrast && npm run verify:ux && npm run verify:seo && npm run harmony:audit && npm run terminal:audit",
+    "brand:build": "node scripts/build-brand-assets.mjs"
   },
   "keywords": [
     "traditional-colors",
@@ -33,5 +35,8 @@
     "design",
     "中华传统色"
   ],
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
 }
