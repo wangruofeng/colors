@@ -1967,6 +1967,7 @@ h3::before {
   min-height: 620px;
   overflow: hidden;
   padding: clamp(30px, 4vw, 52px);
+  padding-top: max(60px, 4vw);
   color: var(--pair-text);
   background: var(--pair-bg);
   border: 0;
@@ -2110,11 +2111,23 @@ h3::before {
   line-height: 1.72;
 }
 
+.use-pair-card--split {
+  grid-template-rows: auto 1fr auto;
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.use-pair-card--split .use-pair-actions {
+  position: static;
+  justify-self: end;
+  margin-right: 44px;
+}
+
 .use-pair-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 420px;
-  margin: -18px;
+  margin: 0 -18px;
   border: 1px solid color-mix(in srgb, var(--pair-text) 18%, transparent);
 }
 
@@ -2519,7 +2532,19 @@ h3::before {
   }
   .use-pair-card {
     min-height: 520px;
-    padding: 28px;
+    padding: 72px 28px 28px;
+  }
+
+  .use-pair-actions {
+    right: 64px;
+  }
+
+  .use-pair-card--split {
+    padding-top: 12px;
+  }
+
+  .use-pair-card--split .use-pair-actions {
+    margin-right: 52px;
   }
 
   .use-pair-split {

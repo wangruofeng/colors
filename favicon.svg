@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">中国传统配色 · 叠色印章</title>
-  <desc id="desc">石青与米白色卡叠在朱红印面之后，印面内三道留白代表色卡与配色。</desc>
-  <path fill="#277A7B" d="M18 4h42v42H18z"/>
-  <path fill="#F2E6CE" d="M11 11h42v42H11z"/>
-  <path fill="#B64036" d="M4 18h42v42H4z"/>
-  <path fill="#FFF8EB" d="M12 26h26v6H12zm0 10h18v6H12zm0 10h26v6H12z"/>
-  <path fill="#D8AF58" d="M34 36h4v6h-4z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc"><title id="title">中国传统配色 · 四色花</title><desc id="desc">四片相同的花瓣围绕花心依次旋转九十度，以石青、朱红、杏黄、灰绿组成旋转对称的四色花。</desc><rect x="2" y="2" width="60" height="60" rx="17" fill="#EFE9DD"/><path d="M32 32C19 34 8 27 10 17C12 6 24 7 29 18C31 23 32 28 32 32Z" fill="#315E50" transform="rotate(0 32 32)"/><path d="M32 32C19 34 8 27 10 17C12 6 24 7 29 18C31 23 32 28 32 32Z" fill="#BC5844" transform="rotate(90 32 32)"/><path d="M32 32C19 34 8 27 10 17C12 6 24 7 29 18C31 23 32 28 32 32Z" fill="#D7AE6B" transform="rotate(180 32 32)"/><path d="M32 32C19 34 8 27 10 17C12 6 24 7 29 18C31 23 32 28 32 32Z" fill="#86A58D" transform="rotate(270 32 32)"/></svg>

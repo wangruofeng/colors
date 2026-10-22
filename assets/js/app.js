@@ -10,6 +10,36 @@ const imagesById = new Map(images.map((image) => [image.id, image]));
 
 const gallery = document.querySelector('[data-gallery]');
 const styleLab = document.querySelector('[data-style-lab]');
+if (styleLab) {
+  let layoutFrame = 0;
+  const scheduleLayout = () => {
+    cancelAnimationFrame(layoutFrame);
+    layoutFrame = requestAnimationFrame(() => {
+      const gap = parseFloat(getComputedStyle(styleLab).columnGap) || 18;
+      const columns = Math.max(1, Math.floor((styleLab.clientWidth + gap) / (360 + gap)));
+      const width = (styleLab.clientWidth - gap * (columns - 1)) / columns;
+      const heights = Array(columns).fill(0);
+      for (const card of styleLab.children) {
+        card.style.width = `${width}px`;
+        const column = heights.indexOf(Math.min(...heights));
+        card.style.left = `${column * (width + gap)}px`;
+        card.style.top = `${heights[column]}px`;
+        heights[column] += card.offsetHeight + gap;
+      }
+      styleLab.style.height = `${Math.max(0, ...heights) - (styleLab.children.length ? gap : 0)}px`;
+    });
+  };
+  const sizeObserver = new ResizeObserver(scheduleLayout);
+  sizeObserver.observe(styleLab);
+  const observeCards = () => {
+    sizeObserver.disconnect();
+    sizeObserver.observe(styleLab);
+    for (const card of styleLab.children) sizeObserver.observe(card);
+    scheduleLayout();
+  };
+  new MutationObserver(observeCards).observe(styleLab, { childList: true });
+  observeCards();
+}
 const styleRefreshButton = document.querySelector('[data-style-refresh]');
 const styleCopyAllButton = document.querySelector('[data-style-copy-all]');
 const styleCopyCssButton = document.querySelector('[data-style-copy-css]');

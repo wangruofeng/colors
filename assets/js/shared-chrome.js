@@ -112,7 +112,7 @@
     return `
     <header class="site-header">
       <a class="brand-mark" href="${base}index.html" aria-label="返回中国传统配色首页">
-        <img class="brand-icon" src="${base}favicon.svg?v=20261022-1" width="40" height="40" alt="" aria-hidden="true">
+        <img class="brand-icon" src="${base}favicon.svg?v=20261022-3" width="40" height="40" alt="" aria-hidden="true">
         <strong>中国传统配色</strong>
       </a>
       <a class="nav-current-chip" href="${navHref(pages.find((page) => page.key === currentPage) || pages[0])}" aria-label="当前页面：${currentPageLabel()}">
@@ -128,7 +128,7 @@
           <iconify-icon icon="lucide:menu" aria-hidden="true"></iconify-icon>
           <span class="sr-only">展开导航</span>
         </button>
-        <a class="nav-icon-link" href="https://github.com/nevertoday/zhongguo-traditional-colors" target="_blank" rel="noopener" aria-label="新标签页打开 GitHub 仓库">
+        <a class="nav-icon-link" href="https://github.com/wangruofeng/colors" target="_blank" rel="noopener" aria-label="新标签页打开 GitHub 仓库">
           <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
         </a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
@@ -144,7 +144,7 @@
     <footer class="site-footer">
       <div class="footer-main">
         <a class="footer-mark" href="${base}index.html" aria-label="返回中国传统配色首页">
-          <img class="brand-icon" src="${base}favicon.svg?v=20261022-1" width="40" height="40" alt="" aria-hidden="true">
+          <img class="brand-icon" src="${base}favicon.svg?v=20261022-3" width="40" height="40" alt="" aria-hidden="true">
           <strong>中国传统配色</strong>
         </a>
         <p>开放色彩资料。生产前请校色。</p>

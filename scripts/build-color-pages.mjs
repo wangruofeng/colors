@@ -555,7 +555,7 @@ function renderColorPage(image, harmony, context, siblings = {}) {
     <meta name="twitter:title" content="${escapeHtml(`${name} ${hex} - 中国传统色`)}">
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${escapeHtml(ogImage)}">
-    <link rel="icon" href="../favicon.svg?v=20261022-1" type="image/svg+xml">
+    <link rel="icon" href="../favicon.svg?v=20261022-3" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../assets/brand/icon-180.png">
     <link rel="icon" href="../assets/brand/favicon.ico" sizes="16x16 32x32 48x48">
     ${jsonLd}
@@ -800,7 +800,7 @@ function renderColorIndex(images, harmonies) {
     <meta name="twitter:title" content="中国传统色大全 · 全部 ${images.length} 色">
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${escapeHtml(ogImage)}">
-    <link rel="icon" href="../favicon.svg?v=20261022-1" type="image/svg+xml">
+    <link rel="icon" href="../favicon.svg?v=20261022-3" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../assets/brand/icon-180.png">
     <link rel="icon" href="../assets/brand/favicon.ico" sizes="16x16 32x32 48x48">
     ${jsonLd}
@@ -948,7 +948,7 @@ function renderHueHub(family, list, totalCount) {
     <meta name="twitter:title" content="${escapeHtml(`${title} · ${count} 色`)}">
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${escapeHtml(ogImage)}">
-    <link rel="icon" href="../favicon.svg?v=20261022-1" type="image/svg+xml">
+    <link rel="icon" href="../favicon.svg?v=20261022-3" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../assets/brand/icon-180.png">
     <link rel="icon" href="../assets/brand/favicon.ico" sizes="16x16 32x32 48x48">
     ${jsonLd}
