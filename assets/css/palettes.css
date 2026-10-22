@@ -2012,7 +2012,7 @@ h3::before {
   align-items: center;
   justify-content: center;
   width: 36px;
-  height: 36px;
+  height: 32px;
   color: var(--pair-bg);
   background: var(--pair-text);
   border: 0;

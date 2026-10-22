@@ -253,6 +253,9 @@ code {
 }
 
 .site-header {
+  --hover-bg: #EEF4F0;
+  --hover-text: #36594B;
+  --selected-bg: #DCE8DF;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -265,6 +268,12 @@ code {
   background: var(--header-bg);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
+}
+
+:root[data-theme="dark"] .site-header {
+  --hover-bg: #253C32;
+  --hover-text: #E2ECE7;
+  --selected-bg: #334E40;
 }
 
 .brand-mark {
@@ -402,14 +411,13 @@ code {
 }
 
 .site-nav a[aria-current="page"] {
-  color: var(--ink);
-  background: transparent;
+  color: var(--hover-text);
+  background: var(--selected-bg);
   font-weight: 650;
 }
 
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
-.site-nav a[aria-current="page"]::after,
 .site-nav button:hover::after,
 .site-nav button:focus-visible::after {
   opacity: 0.52;
@@ -417,7 +425,7 @@ code {
 }
 
 .site-nav a[aria-current="page"]::after {
-  opacity: 0.7;
+  content: none;
 }
 
 .site-nav iconify-icon,
@@ -4843,6 +4851,11 @@ body[data-no-gradient-logic] .skills-list::before {
 
 .dictionary-story-copy {
   min-width: 0;
+}
+
+.dictionary-story-copy .section-kicker,
+.color-detail-hero .section-kicker {
+  color: #ffffff;
 }
 
 .dictionary-story-copy h3 {

@@ -163,7 +163,7 @@
       <div class="footer-meta" aria-label="站点版本信息">
         <span>742 色入库</span>
         <span>Version 2026</span>
-        <span>© 2026 wangruofeng · wangruofeng007.com</span>
+        <span>© 2026 wangruofeng</span>
       </div>
     </footer>`;
   }
