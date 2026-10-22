@@ -257,7 +257,7 @@ code {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(14px, 1.6vw, 24px);
   min-height: 68px;
@@ -358,6 +358,7 @@ code {
 
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
@@ -366,6 +367,8 @@ code {
 
 .site-nav a,
 .site-nav button {
+  flex-shrink: 0;
+  white-space: nowrap;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -432,6 +435,7 @@ code {
 
 .header-tools {
   display: flex;
+  min-width: max-content;
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
@@ -440,6 +444,7 @@ code {
 .nav-icon-link,
 .theme-toggle,
 .nav-menu-toggle {
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -9381,5 +9386,20 @@ body[data-style-dock-collapsed="true"] .style-lab-control.style-lab-dock > *:not
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Keep the navigation trigger clear of the optional page chip on small phones. */
+@media (max-width: 380px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .nav-current-chip {
+    display: none;
+  }
+
+  .header-tools {
+    grid-column: 2;
   }
 }
