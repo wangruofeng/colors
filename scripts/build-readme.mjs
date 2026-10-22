@@ -639,22 +639,6 @@ npm run readme
 
 这会重新生成 \`assets/data/images.js\` 和 README 精选图廊。新增图片时请同时补充对应 \`thumbnails/\` 缩略图，并保持 \`NNN-颜色名.png\` 的命名格式。
 
-## 支持作者
-
-这个传统色图片合集会继续保持免费开源。如果它帮你省了整理素材的时间，欢迎 Star、分享给需要的人，或者用微信、支付宝支持上游作者小小东继续维护。反馈和 issue 同样有帮助。
-
-<table>
-  <tr>
-    <td align="center" width="220">
-      <img src="docs/images/wechat-reward-qr.png" alt="微信打赏上游作者小小东的二维码" width="180"><br>
-      <strong>微信</strong>
-    </td>
-    <td align="center" width="220">
-      <img src="docs/images/alipay-reward-qr.png" alt="支付宝打赏上游作者小小东的二维码" width="180"><br>
-      <strong>支付宝</strong>
-    </td>
-  </tr>
-</table>
 
 ## 联系作者
 
@@ -805,18 +789,6 @@ http://localhost:5173
 
 The complete ZIP is provided through GitHub Releases. Browser-side ZIP generation is kept only as a fallback and should be used through a local server or GitHub Pages, not through \`file://\`.
 
-## Support
-
-This archive remains free and open source. If it saves you time, a Star, a share, a useful issue, or buying 上游作者小小东 a coffee through Buy Me a Coffee all help the project keep improving.
-
-<table>
-  <tr>
-    <td align="center" width="220">
-      <img src="docs/images/buy-me-a-coffee-qr.png" alt="Support 上游作者小小东 through Buy Me a Coffee QR code" width="180"><br>
-      <strong>Buy Me a Coffee</strong>
-    </td>
-  </tr>
-</table>
 
 ## License
 
@@ -955,18 +927,6 @@ http://localhost:5173
 
 完全 ZIP は GitHub Releases から配布しています。ブラウザ側の ZIP 生成は予備手段として残しており、使用する場合は \`file://\` ではなくローカルサーバーまたは GitHub Pages から開いてください。
 
-## サポート
-
-このアーカイブは無料かつオープンソースで公開し続けます。役に立った場合は Star、共有、Issue、または Buy Me a Coffee での支援が小小東の継続的な改善につながります。
-
-<table>
-  <tr>
-    <td align="center" width="220">
-      <img src="docs/images/buy-me-a-coffee-qr.png" alt="Buy Me a Coffee で小小東を支援する QR コード" width="180"><br>
-      <strong>Buy Me a Coffee</strong>
-    </td>
-  </tr>
-</table>
 
 ## ライセンス
 

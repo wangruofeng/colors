@@ -216,18 +216,6 @@ http://localhost:5173
 
 完全 ZIP は GitHub Releases から配布しています。ブラウザ側の ZIP 生成は予備手段として残しており、使用する場合は `file://` ではなくローカルサーバーまたは GitHub Pages から開いてください。
 
-## サポート
-
-このアーカイブは無料かつオープンソースで公開し続けます。役に立った場合は Star、共有、Issue、または Buy Me a Coffee での支援が小小東の継続的な改善につながります。
-
-<table>
-  <tr>
-    <td align="center" width="220">
-      <img src="docs/images/buy-me-a-coffee-qr.png" alt="Buy Me a Coffee で小小東を支援する QR コード" width="180"><br>
-      <strong>Buy Me a Coffee</strong>
-    </td>
-  </tr>
-</table>
 
 ## ライセンス
 

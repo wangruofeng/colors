@@ -9,12 +9,6 @@ function fail(message) {
   failures.push(message);
 }
 
-const qrImages = [...index.matchAll(/<img\b[^>]*docs\/images\/(?:wechat-reward-qr|alipay-reward-qr|buy-me-a-coffee-qr)\.png[^>]*>/g)]
-  .map((match) => match[0]);
-if (qrImages.length !== 3 || qrImages.some((image) => !/\bloading="lazy"/.test(image) || !/\bdecoding="async"/.test(image))) {
-  fail('index.html: all below-fold support QR images should load lazily and decode asynchronously');
-}
-
 const previewImage = index.match(/<img\b[^>]*data-hero-preview-image[^>]*>/)?.[0] || '';
 if (!/\bwidth="1086"/.test(previewImage) || !/\bheight="1448"/.test(previewImage)) {
   fail('index.html: hero preview image should reserve its intrinsic aspect ratio');
