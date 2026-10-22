@@ -63,7 +63,7 @@ Enforce HTTPS: enabled
 colors.wangruofeng007.com
 ```
 
-Cloudflare DNS 中为 `xiaoxiaodong.ai` 添加一条记录：
+Cloudflare DNS 中为 `wangruofeng007.com` 添加一条记录：
 
 ```text
 Type: CNAME

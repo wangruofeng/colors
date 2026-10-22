@@ -39,7 +39,7 @@ UI_TEXT = (
     "中国传统色No.色系暖冷配搭档取自传统库"
     "RGBCMYK拼音小红书竖版方形公众号横版跟随浅深底文艺实用国潮"
     "今日传统色下载分享卡高级东方年轻克制"
-    "colors.xiaoxiaodong.ai"
+    "colors.wangruofeng007.com"
 )
 PINYIN_LETTERS = (
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"

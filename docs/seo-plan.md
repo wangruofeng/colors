@@ -29,7 +29,7 @@
 
 | 优先级 | 行动 | 怎么做（含改动文件） | 工时 |
 |--------|------|---------------------|------|
-| **P0** | 验证 Google + Bing + 百度 站长平台并提交 sitemap | 首选在 `xiaoxiaodong.ai` 加 **DNS TXT** 验证（覆盖全子域，最稳）。或在 `index.html` `<head>` 加 `google-site-verification`/`msvalidate.01`/`baidu-site-verification` meta，并在 `scripts/build-color-pages.mjs`（~L317-339）色卡页模板里同步加上 → `npm run colorpages`。验证后提交 `sitemap.xml`，对首页、`dictionary.html`、`explorer.html` 及 10-20 个代表性色卡页执行 **URL Inspection → Request Indexing**。 | 低（外部配置） |
+| **P0** | 验证 Google + Bing + 百度 站长平台并提交 sitemap | 首选在 `wangruofeng007.com` 加 **DNS TXT** 验证（覆盖全子域，最稳）。或在 `index.html` `<head>` 加 `google-site-verification`/`msvalidate.01`/`baidu-site-verification` meta，并在 `scripts/build-color-pages.mjs`（~L317-339）色卡页模板里同步加上 → `npm run colorpages`。验证后提交 `sitemap.xml`，对首页、`dictionary.html`、`explorer.html` 及 10-20 个代表性色卡页执行 **URL Inspection → Request Indexing**。 | 低（外部配置） |
 | **P0** | **消灭孤儿：让 hub 页输出指向 742 色卡页的服务端 `<a>` 链接** | 扩展 `scripts/build-color-pages.mjs`，额外生成静态 `colors/index.html`，内含全部 742 条真实 `<a href="NNN-名.html">名 HEX</a>`（无 JS 也可读）；在 `index.html`/`dictionary.html` 加显眼入口链到它；让 `dictionary.js` 在已有静态锚点上做渐进增强，而非从空 DOM 构建。把 `colors/index.html` 加进 `renderSitemap`。`npm run colorpages && npm run verify:colorpages`。 | 中（代码） |
 | **P0** | sitemap 每条 URL 加 `<lastmod>` | `renderSitemap()`（`build-color-pages.mjs` ~L425）在每个 `<url>` 块插入 `<lastmod>${date}</lastmod>`（构建日期或每色源图 mtime）。扩展 `verify-color-pages.mjs` 断言 lastmod 存在以防回归。 | 低（代码） |
 | **P1** | 修复 dictionary 详情链接 + 色卡页加「上一/下一色」「所属色系」链接 | `dictionary.js` L457、L657 把 `dictionary.html?q=NAME` 改为 `encodeURI('colors/'+slug+'.html')`（当前连 JS 路径都没引用可索引 URL）。`renderColorPage()` 加静态 prev/next-by-id `<a>` 保证全集可遍历。 | 低（代码） |
